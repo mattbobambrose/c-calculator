@@ -156,14 +156,12 @@ int argcount(char *buf) {
     while (*buf != '\0') {
         if (!isspace(*buf)) {
             cnt++;
-            while (*buf != '\0' && !isspace(*buf))
-                buf++;
+            while (*buf != '\0' && !isspace(*buf)) buf++;
         } else {
             buf++;
         }
     }
     return cnt;
-
 }
 
 int main(int argc, char *argv[]) {
